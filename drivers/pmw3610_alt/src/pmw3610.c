@@ -10,7 +10,6 @@
 #include <zephyr/sys/byteorder.h>
 #include <zephyr/input/input.h>
 #include <zephyr/pm/device.h>
-#include <zmk/keymap.h>
 #include <zmk/events/activity_state_changed.h>
 #include "pmw3610.h"
 
