@@ -4,17 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&pointing_listener {
-    scroller {
-            layers = <5>;
-            input-processors =
-                <&zip_xy_scaler 1 56>,
-                <&zip_xy_to_scroll_mapper>,
-                <&scroll_scaler 1 20>;
-        process-next;
-        };
-    };
-
 / {
     combos {
         compatible = "zmk,combos";
