@@ -33,19 +33,19 @@
 
         default_layer_for_mac {
             bindings = <
-&kp ESC     &kp Q             &kp W         &kp E             &kp R             &kp T  &kp Y      &kp U       &kp I     &kp O       &kp P                    &trans
-&kp TAB     &kp A             &kp S         &kp D             &kp F             &kp G  &kp H      &kp J       &kp K     &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
-&kp LSHFT   &kp Z             &kp X         &kp C             &kp V             &kp B  &trans     &mo 4       &kp N     &kp M       &kp COMMA                &kp DOT                     &kp SLASH  &mt_controlled RIGHT_SHIFT BACKSLASH
-&kp DELETE  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LC(UP_ARROW)  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp RETURN  &kp BSPC  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&kp ESC    &kp Q             &kp W         &kp E             &kp R             &kp T  &kp Y      &kp U       &kp I     &kp O       &kp P                    &trans
+&kp TAB    &kp A             &kp S         &kp D             &kp F             &kp G  &kp H      &kp J       &kp K     &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
+&kp LSHFT  &kp Z             &kp X         &kp C             &kp V             &kp B  &trans     &mo 3       &kp N     &kp M       &kp COMMA                &kp DOT                     &kp SLASH  &mt_controlled RIGHT_SHIFT BACKSLASH
+&to 5      &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LC(UP_ARROW)  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp RETURN  &kp BSPC  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
         lower_layer_for_windows {
             bindings = <
-&kp ESC     &kp Q     &kp W     &kp E                       &kp R      &kp T  &kp Y      &kp U      &kp I     &kp O       &kp P                    &trans
-&kp TAB     &kp A     &kp S     &kp D                       &kp F      &kp G  &kp H      &kp J      &kp K     &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
-&kp LSHFT   &kp Z     &kp X     &kp C                       &kp V      &kp B  &kp SPACE  &kp SPACE  &kp N     &kp M       &kp COMMA                &kp DOT                     &kp FSLH  &mt_controlled RSHFT BACKSLASH
-&kp DELETE  &kp LGUI  &kp LALT  &mt_controlled LANG1 LANG2  &kp LCTRL  &mo 6  &kp SPACE  &kp ENTER  &kp BSPC  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&kp ESC    &kp Q     &kp W     &kp E                       &kp R      &kp T  &kp Y      &kp U      &kp I     &kp O       &kp P                    &kp DELETE
+&kp TAB    &kp A     &kp S     &kp D                       &kp F      &kp G  &kp H      &kp J      &kp K     &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
+&kp LSHFT  &kp Z     &kp X     &kp C                       &kp V      &kp B  &trans     &to 3      &kp N     &kp M       &kp COMMA                &kp DOT                     &kp FSLH  &mt_controlled RSHFT BACKSLASH
+&to 5      &kp LGUI  &kp LALT  &mt_controlled LANG1 LANG2  &kp LCTRL  &mo 2  &kp SPACE  &kp ENTER  &kp BSPC  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
@@ -67,12 +67,21 @@
             >;
         };
 
-        layer_3 {
+        fun_bt_layer {
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_NXT    &to 0         &to 1         &trans
 &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans        &trans          &out OUT_USB  &out OUT_BLE  &trans        &trans  &trans  &trans
 &trans  &trans   &trans   &trans   &trans   &trans   &trans        &trans          &trans        &trans        &trans        &trans
+            >;
+        };
+
+        track_ball {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                &mkp LCLK  &trans            &mkp RCLK  &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp RG(LEFT_BRACKET)  &mkp MB1   &mkp MB3          &mkp MB2   &kp RG(RIGHT_BRACKET)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &kp LC(UP_ARROW)  &trans     &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans            &trans     &trans                 &trans
             >;
         };
 
@@ -84,14 +93,14 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+    };
 
-        track_ball {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                &mkp LCLK  &mo 1             &mkp RCLK  &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp RG(LEFT_BRACKET)  &mkp MB1   &mkp MB3          &mkp MB2   &kp RG(RIGHT_BRACKET)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &kp LC(UP_ARROW)  &trans     &trans                 &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                &trans     &trans            &trans     &trans                 &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Cond_FunBtlayer {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
