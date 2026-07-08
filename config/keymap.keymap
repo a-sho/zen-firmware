@@ -33,19 +33,19 @@
 
         default_layer_for_mac {
             bindings = <
-&kp ESC    &kp Q             &kp W         &kp E             &kp R             &kp T  &kp Y      &kp U       &kp I     &kp O       &kp P                    &kp DELETE
-&kp TAB    &kp A             &kp S         &kp D             &kp F             &kp G  &kp H      &kp J       &kp K     &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
-&kp LSHFT  &kp Z             &kp X         &kp C             &kp V             &kp B  &trans     &kp BSPC    &kp N     &kp M       &kp COMMA                &kp DOT                     &kp SLASH  &mt_controlled RIGHT_SHIFT BACKSLASH
-&mo 5      &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LC(UP_ARROW)  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp RETURN  &mo 3     &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&kp ESC    &kp Q             &kp W         &kp E             &kp R             &kp T  &kp Y      &kp U          &kp I  &kp O       &kp P                    &kp DELETE
+&kp TAB    &kp A             &kp S         &kp D             &kp F             &kp G  &kp H      &kp J          &kp K  &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
+&kp LSHFT  &kp Z             &kp X         &kp C             &kp V             &kp B  &trans     &kp BACKSPACE  &kp N  &kp M       &kp COMMA                &kp DOT                     &kp SLASH  &mt_controlled RIGHT_SHIFT BACKSLASH
+&mo 5      &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LC(UP_ARROW)  &kp LEFT_COMMAND  &mo 2  &kp SPACE  &kp RETURN     &mo 3  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
         lower_layer_for_windows {
             bindings = <
-&kp ESC    &kp Q     &kp W     &kp E                       &kp R      &kp T  &kp Y      &kp U      &kp I     &kp O       &kp P                    &kp DELETE
-&kp TAB    &kp A     &kp S     &kp D                       &kp F      &kp G  &kp H      &kp J      &kp K     &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
-&kp LSHFT  &kp Z     &kp X     &kp C                       &kp V      &kp B  &trans     &kp BSPC   &kp N     &kp M       &kp COMMA                &kp DOT                     &kp FSLH  &mt_controlled RSHFT BACKSLASH
-&mo 5      &kp LGUI  &kp LALT  &mt_controlled LANG1 LANG2  &kp LCTRL  &mo 2  &kp SPACE  &kp ENTER  &mo 3     &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&kp ESC    &kp Q     &kp W     &kp E                       &kp R      &kp T  &kp Y      &kp U          &kp I  &kp O       &kp P                    &kp DELETE
+&kp TAB    &kp A     &kp S     &kp D                       &kp F      &kp G  &kp H      &kp J          &kp K  &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
+&kp LSHFT  &kp Z     &kp X     &kp C                       &kp V      &kp B  &trans     &kp BACKSPACE  &kp N  &kp M       &kp COMMA                &kp DOT                     &kp FSLH  &mt_controlled RSHFT BACKSLASH
+&mo 5      &kp LGUI  &kp LALT  &mt_controlled LANG1 LANG2  &kp LCTRL  &mo 2  &kp SPACE  &kp ENTER      &mo 3  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
@@ -54,7 +54,7 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS      &trans
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &trans
 &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans           &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MULTIPLY  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans           &kp KP_N0        &trans           &kp KP_SLASH     &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &kp KP_NUMBER_0  &trans           &trans           &kp KP_SLASH     &trans
             >;
         };
 
