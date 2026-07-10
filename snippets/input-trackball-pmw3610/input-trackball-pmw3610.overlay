@@ -9,12 +9,11 @@
         codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
         track-remainders;
     };
-    /* ★追加 */
-    ztl_mouse: ztl_mouse {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        require-prior-idle-ms = <700>;
-    };
+};
+
+/* zip_temp_layer に誤操作防止の設定 */
+&zip_temp_layer {
+    require-prior-idle-ms = <700>;
 };
 
 &spi0 {
