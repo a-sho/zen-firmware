@@ -13,7 +13,7 @@
 
 /* zip_temp_layer に誤操作防止の設定 */
 &zip_temp_layer {
-    require-prior-idle-ms = <800>;
+    require-prior-idle-ms = <500>;
 };
 
 &spi0 {
