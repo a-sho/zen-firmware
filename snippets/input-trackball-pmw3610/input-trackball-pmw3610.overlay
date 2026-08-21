@@ -44,7 +44,8 @@
 &pointing_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
-        <&zip_temp_layer 5 500>;
+        //マウス用レイヤーを1.2秒保持
+        <&zip_temp_layer 5 1200>;
 
     scroller {
         layers = <6>;
