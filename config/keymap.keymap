@@ -28,6 +28,11 @@
         };
     };
 
+    &mkp_input_listener {
+           //左クリック後0.18秒でレイヤー5を抜ける
+            input-processors = <&zip_temp_layer 5 180>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
