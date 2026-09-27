@@ -40,28 +40,28 @@
 
         default_layer_for_mac {
             bindings = <
-&mt LG(LS(N4)) ESC  &kp Q             &kp W         &kp E             &kp R             &kp T  &kp Y        &kp U            &kp I          &kp O       &kp P                    &kp DELETE
-&kp TAB             &kp A             &kp S         &kp D             &kp F             &kp G  &kp H        &kp J            &kp K          &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
-&kp LSHFT           &kp Z             &kp X         &kp C             &kp V             &kp B  &kp ESC      &lt 2 BACKSPACE  &kp N          &kp M       &kp COMMA                &kp DOT                     &kp SLASH  &mt_controlled RIGHT_SHIFT BACKSLASH
-&tog 5              &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LC(UP_ARROW)  &kp LEFT_COMMAND  &mo 2  &lt 3 SPACE  &lt 3 ENTER      &kp BACKSPACE  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&mt LG(LS(N4)) ESC  &kp Q             &kp W         &kp E             &kp R             &kp T        &kp Y         &kp U        &kp I          &kp O       &kp P                    &kp DELETE
+&kp TAB             &kp A             &kp S         &kp D             &kp F             &kp G        &kp H         &kp J        &kp K          &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
+&kp LSHFT           &kp Z             &kp X         &kp C             &kp V             &kp B        &kp SPACE     &mo 2        &kp N          &kp M       &kp COMMA                &kp DOT                     &kp SLASH  &mt_controlled RIGHT_SHIFT BACKSLASH
+&tog 5              &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LC(UP_ARROW)  &kp LEFT_COMMAND  &lt 2 SPACE  &lt 3 ESCAPE  &lt 3 ENTER  &kp BACKSPACE  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
         lower_layer_for_windows {
             bindings = <
-&mt PRINTSCREEN ESC  &kp Q     &kp W     &kp E                       &kp R      &kp T  &kp Y        &kp U            &kp I          &kp O       &kp P                    &kp DELETE
-&kp TAB              &kp A     &kp S     &kp D                       &kp F      &kp G  &kp H        &kp J            &kp K          &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
-&kp LSHFT            &kp Z     &kp X     &kp C                       &kp V      &kp B  &kp ESC      &lt 2 BACKSPACE  &kp N          &kp M       &kp COMMA                &kp DOT                     &kp FSLH  &mt_controlled RSHFT BACKSLASH
-&tog 5               &kp LGUI  &kp LALT  &mt_controlled LANG2 LANG1  &kp LCTRL  &mo 2  &lt 3 SPACE  &lt 3 ENTER      &kp BACKSPACE  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
+&mt PRINTSCREEN ESC  &kp Q     &kp W     &kp E                       &kp R      &kp T        &kp Y      &kp U        &kp I          &kp O       &kp P                    &kp DELETE
+&kp TAB              &kp A     &kp S     &kp D                       &kp F      &kp G        &kp H      &kp J        &kp K          &kp L       &mt_controlled SQT SEMI  &mt_controlled EQUAL MINUS
+&kp LSHFT            &kp Z     &kp X     &kp C                       &kp V      &kp B        &kp SPACE  &mo 2        &kp N          &kp M       &kp COMMA                &kp DOT                     &kp FSLH  &mt_controlled RSHFT BACKSLASH
+&tog 5               &kp LGUI  &kp LALT  &mt_controlled LANG2 LANG1  &kp LCTRL  &lt 2 SPACE  &lt 3 ESC  &lt 3 ENTER  &kp BACKSPACE  &kp C_MUTE  &kp C_VOLUME_DOWN        &kp C_VOLUME_UP
             >;
         };
 
         fn_num_layer {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &kp N7  &kp N8      &kp N9  &kp PLUS         &trans       &trans
-&trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N4  &kp N5      &kp N6  &kp MINUS        &trans       &trans
-&trans  &kp F11  &kp F12  &trans  &trans  &trans   &trans  &kp KP_DOT  &kp N1  &kp N2           &kp N3       &kp ASTERISK  &trans  &trans
-&trans  &trans   &trans   &trans  &trans  &trans   &trans  &kp N0      &trans  &kp RC(RS(TAB))  &kp RC(TAB)  &kp F12
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &kp N7  &kp N8      &kp N9  &kp PLUS         &kp ASTERISK  &trans
+&trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N4  &kp N5      &kp N6  &kp MINUS        &kp SLASH     &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans   &trans  &kp KP_DOT  &kp N1  &kp N2           &kp N3        &trans   &trans  &trans
+&trans  &trans   &trans   &trans  &trans  &trans   &trans  &trans      &kp N0  &kp RC(RS(TAB))  &kp RC(TAB)   &kp F12
             >;
         };
 
@@ -69,8 +69,8 @@
             bindings = <
 &trans  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR            &kp PERCENT            &kp PG_UP  &kp HOME  &kp UP        &kp END           &trans  &trans
 &trans  &kp CARET        &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PG_DN  &kp LEFT  &kp DOWN      &kp RIGHT         &trans  &trans
-&trans  &kp GRAVE        &kp APOS       &kp SEMI      &kp LBKT              &kp RBKT               &trans     &trans    &kp LG(LEFT)  &kp LG(LC(LEFT))  &trans  &kp LC(LG(RIGHT))  &kp LG(RIGHT)  &trans
-&trans  &trans           &trans         &trans        &trans                &trans                 &trans     &trans    &trans        &trans            &trans  &trans
+&trans  &kp GRAVE        &kp APOS       &kp SEMI      &kp LBKT              &kp RBKT               &kp LANG2  &trans    &kp LG(LEFT)  &kp LG(LC(LEFT))  &trans  &kp LC(LG(RIGHT))  &kp LG(RIGHT)  &trans
+&trans  &trans           &trans         &trans        &trans                &trans                 &kp LANG1  &trans    &trans        &trans            &trans  &trans
             >;
         };
 
