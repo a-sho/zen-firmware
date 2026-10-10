@@ -82,12 +82,12 @@
             >;
         };
 
-        track_ball {
+        mouse_layer {
             bindings = <
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&kp LA(F4)  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans
+&kp LA(F4)  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
         };
 
