@@ -34,7 +34,7 @@ manifest:
     - name: zmk-scroll-snap
       remote: kot149
       revision: v1
-    - name: zmk-scroll-snap
+    - name: zmk-mouse-gesture
       remote: kot149
       revision: v1
   self:
