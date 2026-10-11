@@ -7,6 +7,7 @@
 
 &mkp_input_listener {
     //クリック後1秒でAMLを抜ける
+
     input-processors = <&zip_temp_layer 5 1000>;
 };
 
@@ -14,9 +15,14 @@
     combos {
         compatible = "zmk,combos";
 
-        scrol {
+        to_scroll_layer {
             bindings = <&mo 6>;
             key-positions = <20 21>;
+        };
+
+        to_gestuer_layer {
+            bindings = <&mo 7>;
+            key-positions = <8 9>;
         };
     };
 
@@ -91,6 +97,15 @@
         };
 
         scroll_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        gesture_layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
