@@ -1,5 +1,7 @@
 
 #include <dt-bindings/zmk/input_transform.h>
+#include <mouse-gesture.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     pmw3610_scroll_scaler: pmw3610_scroll_scaler {
@@ -24,6 +26,20 @@
         42 // Cmd（WindowsではCtrl）
     >;
 };
+
+/* ジェスチャー機能の追加 */
+&zip_mouse_gesture {
+    always-active;          // 必須：キーを押さなくても、このレイヤーにいる間は認識する
+    enable-eager-mode;      // 任意：動かした方向が決まった瞬間に実行する
+    suppress-movement;      // 任意：レイヤー7ではカーソルを動かさない
+    stroke-size = <300>;    // 任意：cpi 1600なので標準の200より少し長めに
+
+    desktop_left  { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(RIGHT)>; };
+    desktop_right { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(LEFT)>;  };
+    mission_ctrl  { pattern = <GESTURE_DOWN>;  bindings = <&kp LC(UP)>;    };
+    app_expose    { pattern = <GESTURE_UP>;    bindings = <&kp LC(DOWN)>;  };
+};
+
 
 &spi0 {
     status = "okay";
@@ -54,12 +70,21 @@
         //AMLレイヤー／タイムアウト時間
         <&zip_temp_layer 5 10000>;
 
+    // スクロールの設定
     scroller {
-        layers = <6>;
+        layers = <6>; // レイヤー6（scroll_layer）で発動
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
-            <&pmw3610_scroll_scaler 1 40>;
+            <&pmw3610_scroll_scaler 1 20>;
         process-next;
+    };
+
+    // ジェスチャーの設定
+    gesture {
+        layers = <7>; // レイヤー7（gesture_layer）で発動
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
+            <&zip_mouse_gesture>;
     };
 };
