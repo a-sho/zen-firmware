@@ -7,6 +7,7 @@
 
 &mkp_input_listener {
     //クリック後1秒でAMLを抜ける
+
     input-processors = <&zip_temp_layer 5 1000>;
 };
 
@@ -62,10 +63,10 @@
 
         fn_num_layer {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &kp N7  &kp N8        &kp N9  &kp PLUS   &kp ASTERISK  &trans
-&trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N4  &kp N5        &kp N6  &kp MINUS  &kp SLASH     &trans
-&trans  &kp F11  &kp F12  &trans  &trans  &trans   &trans  &kp KP_DOT    &kp N1  &kp N2     &kp N3        &kp EQUAL  &trans  &trans
-&trans  &trans   &trans   &trans  &trans  &trans   &trans  &kp NUMBER_0  &trans  &trans     &trans        &trans
+&trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &kp N7  &kp N8      &kp N9  &kp PLUS   &kp ASTERISK  &trans
+&trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp N4  &kp N5      &kp N6  &kp MINUS  &kp SLASH     &trans
+&trans  &kp F11  &kp F12  &trans  &trans  &trans   &trans  &kp KP_DOT  &kp N1  &kp N2     &kp N3        &kp EQUAL  &trans  &trans
+&trans  &trans   &trans   &trans  &trans  &trans   &trans  &lt 3 N0    &trans  &trans     &trans        &trans
             >;
         };
 
@@ -89,10 +90,10 @@
 
         mouse_layer {
             bindings = <
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans
-&kp LA(F4)  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
         };
 
